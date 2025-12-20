@@ -22,3 +22,10 @@ class aircraft_state:
     heading_deg: float # heading in degrees (0 = +x, 90 = +y)
     vz_fpm: float = 0.0 # vertical speed in feet per minute (+ means up)
 
+    def position_vector(self) -> np.ndarray:
+        return np.array([self.x_nm, self.y_nm], dtype=float)
+    
+    def full_vector(self) -> np.ndarray:
+        return np.array([self.x_nm, self.y_nm, self.alt_ft], dtype=float)
+    
+    
