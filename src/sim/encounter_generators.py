@@ -29,14 +29,14 @@ def make_crossing(
     speed_kts: float = 360.0,
     alt_ft_a: float = 30000.0,
     alt_ft_b: float = 30000.0,
+    b_extra_offset_nm: float = 0.0,
 ):
     """
     Two aircraft crossing at (0,0):
     - Aircraft A starts at (-start_offset_nm, 0) heading east (0 deg)
-    - Aircraft B starts at (0, -start_offset_nm) heading north (90 deg)
+    - Aircraft B starts at (0, -(start_offset_nm + b_extra_offset_nm)) heading north (90 deg)
 
-    If alt_ft_a == alt_ft_b and they arrive at the intersection at similar times,
-    they may conflict near the crossing point.
+    b_extra_offset_nm > 0 makes B start farther away (arrives later).
     """
     a = aircraft_state(
         x_nm=-start_offset_nm,
@@ -48,7 +48,7 @@ def make_crossing(
     )
     b = aircraft_state(
         x_nm=0.0,
-        y_nm=-start_offset_nm,
+        y_nm=-(start_offset_nm + b_extra_offset_nm),
         alt_ft=alt_ft_b,
         speed_kts=speed_kts,
         heading_deg=90.0,
