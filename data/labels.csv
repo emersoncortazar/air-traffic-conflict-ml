@@ -1,0 +1,11 @@
+b_extra_offset_nm,conflict,encounter_type,scenario_id,sep_nm,ttc_s
+,True,head_on,0,10.0,26.0
+,True,head_on,1,15.0,51.0
+,True,head_on,2,20.0,75.0
+,True,head_on,3,25.0,100.0
+0.0,True,crossing,4,,65.0
+2.0,True,crossing,5,,77.0
+4.0,True,crossing,6,,91.0
+6.0,True,crossing,7,,112.0
+8.0,False,crossing,8,,-1.0
+10.0,False,crossing,9,,-1.0
