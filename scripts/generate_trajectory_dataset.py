@@ -1,5 +1,6 @@
 import csv
 from pathlib import Path
+import pandas as pd
 
 from src.sim.encounter_generators import make_head_on, make_crossing
 from src.sim.simulate import simulate_pair
@@ -74,19 +75,21 @@ def main():
 
     # write outputs as csv
     out_dir = Path("data")
+    out_dir.mkdir(parents=True, exist_ok=True)
+
+    traj_df = pd.DataFrame(traj_rows)
+    labels_df = pd.DataFrame(label_rows)
+
     traj_path = out_dir / "trajectories.csv"
     labels_path = out_dir / "labels.csv"
 
-    traj_fieldnames = list(traj_rows[0].keys())
-    label_fieldnames = sorted({k for row in label_rows for k in row.keys()})
+    traj_df.to_csv(traj_path, index=False)
+    labels_df.to_csv(labels_path, index=False)
 
+    print("Wrote:", traj_path, "rows:", len(traj_df))
+    print("Wrote:", labels_path, "rows:", len(labels_df))
+    print("Example label row:", labels_df.iloc[0].to_dict())
 
-    write_csv(traj_path, traj_rows, traj_fieldnames)
-    write_csv(labels_path, label_rows, label_fieldnames)
-
-    print("Wrote:", traj_path, "rows:", len(traj_rows))
-    print("Wrote:", labels_path, "rows:", len(label_rows))
-    print("Example label row:", label_rows[0])
 
 if __name__ == "__main__":
     main()
