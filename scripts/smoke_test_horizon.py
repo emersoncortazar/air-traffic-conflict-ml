@@ -1,5 +1,5 @@
-from src.sim.dynamics import aircraft_state
-from src.sim.conflict import conflict_within_horizon
+from atcml.sim.dynamics import aircraft_state
+from atcml.sim.conflict import conflict_within_horizon
 
 def main():
     # Aircraft A starts at x=0 moving east at 360 kts (0.1 NM/s)

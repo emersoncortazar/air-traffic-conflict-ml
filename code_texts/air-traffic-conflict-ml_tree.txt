@@ -1,0 +1,80 @@
+air-traffic-conflict-ml/
+├── api/
+│   ├── main.py
+│   └── schemas.py
+├── configs/
+│   ├── dataset_large.yaml
+│   ├── dataset_small.yaml
+│   ├── train_baseline.yaml
+│   └── train_sequence.yaml
+├── docs/
+│   ├── figures/
+│   └── paper.md
+├── models/
+├── reports/
+├── scripts/
+│   ├── build_features.py
+│   ├── evaluate.py
+│   ├── export_head_on_trajectory.py
+│   ├── generate_crossing_summary.py
+│   ├── generate_dataset.py
+│   ├── generate_trajectory_dataset.py
+│   ├── smoke_test_conflict.py
+│   ├── smoke_test_dynamics.py
+│   ├── smoke_test_encounter_crossing.py
+│   ├── smoke_test_encounter_head_on.py
+│   ├── smoke_test_horizon.py
+│   ├── smoke_test_simulate_pair.py
+│   ├── train_baseline.py
+│   └── train_ml.py
+├── src/
+│   ├── atcml/
+│   │   ├── data/
+│   │   │   ├── crossing_summary.csv
+│   │   │   ├── features.csv
+│   │   │   ├── labels.csv
+│   │   │   ├── trajectories.csv
+│   │   │   └── trajectories_head_on.csv
+│   │   ├── ml/
+│   │   │   ├── __init__.py
+│   │   │   ├── baselines.py
+│   │   │   ├── calibrate.py
+│   │   │   ├── evaluate.py
+│   │   │   ├── losses.py
+│   │   │   ├── metrics.py
+│   │   │   ├── sequence.py
+│   │   │   └── split.py
+│   │   ├── sim/
+│   │   │   ├── airspace.py
+│   │   │   ├── conflict.py
+│   │   │   ├── dynamics.py
+│   │   │   ├── encounter_generators.py
+│   │   │   ├── noise_models.py
+│   │   │   └── simulate.py
+│   │   ├── viz/
+│   │   │   ├── __init__.py
+│   │   │   ├── calibration.py
+│   │   │   └── trajectories.py
+│   │   └── __init__.py
+│   ├── baselines/
+│   │   ├── kalman.py
+│   │   ├── kinematics.py
+│   │   └── tcpa_dca.py
+│   ├── eval/
+│   │   ├── calibration.py
+│   │   ├── latency.py
+│   │   ├── metrics.py
+│   │   └── plots.py
+│   ├── models/
+│   │   ├── losses.py
+│   │   ├── lstm.py
+│   │   └── transformer.py
+│   └── training/
+│       ├── config.py
+│       ├── dataset.py
+│       └── train.py
+├── tests/
+├── web/
+├── environment.yml
+├── pyproject.toml
+└── README.md

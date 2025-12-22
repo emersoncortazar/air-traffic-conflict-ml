@@ -1,4 +1,4 @@
-from src.sim.dynamics import aircraft_state, step_state
+from atcml.sim.dynamics import aircraft_state, step_state
 
 def main():
     # test of starting at the origin, altitude of of 30,000 ft

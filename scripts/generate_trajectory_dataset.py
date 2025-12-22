@@ -2,9 +2,9 @@ import csv
 from pathlib import Path
 import pandas as pd
 
-from src.sim.encounter_generators import make_head_on, make_crossing
-from src.sim.simulate import simulate_pair
-from src.sim.conflict import conflict_within_horizon
+from atcml.sim.encounter_generators import make_head_on, make_crossing
+from atcml.sim.simulate import simulate_pair
+from atcml.sim.conflict import conflict_within_horizon
 
 def write_csv(path: Path, rows: list[dict], fieldnames: list[str]) -> None:
     path.parent.mkdir(parents=True, exist_ok=True)

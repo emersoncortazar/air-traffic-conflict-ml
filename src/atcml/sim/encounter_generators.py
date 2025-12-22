@@ -1,4 +1,4 @@
-from src.sim.dynamics import aircraft_state
+from atcml.sim.dynamics import aircraft_state
 
 def make_head_on(separation_nm: float = 20.0, speed_kts: float = 360.0, alt_ft: float = 30000.0):
     """

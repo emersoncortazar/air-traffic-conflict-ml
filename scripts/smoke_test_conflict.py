@@ -1,5 +1,6 @@
-from src.sim.dynamics import aircraft_state
-from src.sim.conflict import is_loss_of_separation, horizontal_separation_nm, vertical_separation_ft
+from atcml.sim.dynamics import aircraft_state
+from atcml.sim.conflict import is_loss_of_separation, horizontal_separation_nm, vertical_separation_ft
+
 
 def main():
     a = aircraft_state(x_nm=0.0, y_nm=0.0, alt_ft=30000.0, speed_kts=0.0, heading_deg=0.0)

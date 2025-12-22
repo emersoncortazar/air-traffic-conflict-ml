@@ -1,5 +1,5 @@
-from src.sim.encounter_generators import make_head_on
-from src.sim.simulate import simulate_pair
+from atcml.sim.encounter_generators import make_head_on
+from atcml.sim.simulate import simulate_pair
 
 def main():
     a, b = make_head_on(separation_nm=20.0, speed_kts=360.0, alt_ft=30000.0)

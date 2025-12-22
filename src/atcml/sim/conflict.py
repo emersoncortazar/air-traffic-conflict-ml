@@ -1,5 +1,5 @@
 import numpy as np
-from src.sim.dynamics import step_state
+from atcml.sim.dynamics import step_state
 
 # Separation thresholds
 HORIZONTAL_THRESHOLD_NM = 5.0

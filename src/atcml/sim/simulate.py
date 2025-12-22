@@ -1,4 +1,4 @@
-from src.sim.dynamics import step_state
+from atcml.sim.dynamics import step_state
 
 def simulate_pair(state0, state1, dt_s: float, horizon_s: float):
     """

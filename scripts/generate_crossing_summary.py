@@ -1,5 +1,5 @@
-from src.sim.encounter_generators import make_crossing
-from src.sim.conflict import conflict_within_horizon
+from atcml.sim.encounter_generators import make_crossing
+from atcml.sim.conflict import conflict_within_horizon
 from pathlib import Path
 import csv
 
