@@ -28,7 +28,9 @@ def main():
         min_v = float(g["v_sep_ft"].min())
 
         # initial separations (at t=0) for comparison
-        g0 = g[g["t_s"] == 0.0].iloc[0]
+        g_sorted = g.sort_values("t_s")
+        g0 = g_sorted.iloc[0]   # earliest observed timestep (maybe not exactly 0.0)
+
         h0 = float(g0["h_sep_nm"])
         v0 = float(g0["v_sep_ft"])
 
